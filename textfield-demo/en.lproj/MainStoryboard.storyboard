@@ -1,23 +1,155 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number 1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acx-f0-Ve8">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="PyS-NG-JS8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vvf-hR-KHJ">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textEdited:" destination="2" eventType="editingDidEnd" id="b8p-Pw-eAf"/>
+                                    <outlet property="delegate" destination="2" id="3nL-kX-LWT"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number 2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hn-9S-E57">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BAj-y1-qmu">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textEdited:" destination="2" eventType="editingDidEnd" id="fHt-9F-18Q"/>
+                                    <outlet property="delegate" destination="2" id="oNs-Gg-6Rg"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMW-v5-KK0">
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number 1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cz-gD-nkP">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="0jO-Dq-6Wc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ojh-VF-Dc7">
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation"/>
+                                        <connections>
+                                            <action selector="textEdited:" destination="2" eventType="editingDidEnd" id="ywW-9C-lKQ"/>
+                                            <outlet property="delegate" destination="2" id="TBu-el-A7B"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number 2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVr-6q-edC">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sum is" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iy-fG-ymb">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhX-dB-gXn">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="ReU-s6-7JP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CH9-lB-uPJ">
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation"/>
+                                        <connections>
+                                            <action selector="textEdited:" destination="2" eventType="editingDidEnd" id="g3N-4K-cM6"/>
+                                            <outlet property="delegate" destination="2" id="XBf-ci-x4D"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="EhX-dB-gXn" firstAttribute="leading" secondItem="2iy-fG-ymb" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="2eB-fb-qQi"/>
+                                    <constraint firstItem="Ojh-VF-Dc7" firstAttribute="top" secondItem="fMW-v5-KK0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="7Mf-a9-Rld"/>
+                                    <constraint firstItem="EhX-dB-gXn" firstAttribute="leading" secondItem="CH9-lB-uPJ" secondAttribute="leading" type="default" id="FBa-0X-lNJ"/>
+                                    <constraint firstItem="CH9-lB-uPJ" firstAttribute="top" secondItem="Ojh-VF-Dc7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HFN-v9-A8w"/>
+                                    <constraint firstItem="EhX-dB-gXn" firstAttribute="baseline" secondItem="2iy-fG-ymb" secondAttribute="baseline" type="default" id="IWP-62-lky"/>
+                                    <constraint firstItem="Ojh-VF-Dc7" firstAttribute="leading" secondItem="1Cz-gD-nkP" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="JVn-mO-Wdg"/>
+                                    <constraint firstItem="PVr-6q-edC" firstAttribute="leading" secondItem="fMW-v5-KK0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RKo-iY-Lu0"/>
+                                    <constraint firstItem="1Cz-gD-nkP" firstAttribute="top" secondItem="fMW-v5-KK0" secondAttribute="top" constant="24" id="YGy-9d-7o4"/>
+                                    <constraint firstAttribute="trailing" secondItem="CH9-lB-uPJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dhi-jM-3uD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ojh-VF-Dc7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gQL-B6-nSt"/>
+                                    <constraint firstItem="PVr-6q-edC" firstAttribute="top" secondItem="fMW-v5-KK0" secondAttribute="top" constant="62" id="iW4-2w-0A1"/>
+                                    <constraint firstItem="2iy-fG-ymb" firstAttribute="leading" secondItem="fMW-v5-KK0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="j0v-X9-N4o"/>
+                                    <constraint firstItem="1Cz-gD-nkP" firstAttribute="leading" secondItem="fMW-v5-KK0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mQh-CJ-gWh"/>
+                                    <constraint firstItem="2iy-fG-ymb" firstAttribute="top" secondItem="PVr-6q-edC" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qNY-Je-Gkq"/>
+                                    <constraint firstItem="CH9-lB-uPJ" firstAttribute="leading" secondItem="PVr-6q-edC" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="udH-5I-OgY"/>
+                                    <constraint firstItem="CH9-lB-uPJ" firstAttribute="leading" secondItem="Ojh-VF-Dc7" secondAttribute="leading" type="default" id="wgr-or-2we"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Acx-f0-Ve8" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Bkt-Sj-cT0"/>
+                            <constraint firstItem="fMW-v5-KK0" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="KSr-iG-ALR"/>
+                            <constraint firstItem="BAj-y1-qmu" firstAttribute="leading" secondItem="4hn-9S-E57" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="MQ3-NE-YXC"/>
+                            <constraint firstItem="Vvf-hR-KHJ" firstAttribute="leading" secondItem="Acx-f0-Ve8" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Pe3-1E-gSs"/>
+                            <constraint firstItem="fMW-v5-KK0" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="SZj-y4-LL4"/>
+                            <constraint firstItem="Vvf-hR-KHJ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="SgM-gM-0IO"/>
+                            <constraint firstItem="BAj-y1-qmu" firstAttribute="leading" secondItem="Vvf-hR-KHJ" secondAttribute="leading" type="default" id="XpW-zz-UFb"/>
+                            <constraint firstItem="BAj-y1-qmu" firstAttribute="top" secondItem="Vvf-hR-KHJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="bHw-VX-31Z"/>
+                            <constraint firstAttribute="trailing" secondItem="Vvf-hR-KHJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lrY-cI-CQw"/>
+                            <constraint firstItem="Acx-f0-Ve8" firstAttribute="top" secondItem="3" secondAttribute="top" constant="24" id="m7A-a0-r7q"/>
+                            <constraint firstItem="4hn-9S-E57" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ovy-bY-YnU"/>
+                            <constraint firstAttribute="trailing" secondItem="BAj-y1-qmu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="uT5-kk-bzy"/>
+                            <constraint firstItem="fMW-v5-KK0" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="wiZ-tP-hze"/>
+                            <constraint firstItem="4hn-9S-E57" firstAttribute="top" secondItem="3" secondAttribute="top" constant="62" id="wuq-tb-pYg"/>
+                            <constraint firstItem="fMW-v5-KK0" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="yDw-0k-dzO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="num1field" destination="Ojh-VF-Dc7" id="CyO-Ah-kR6"/>
+                        <outlet property="num2field" destination="CH9-lB-uPJ" id="1NU-wq-KJg"/>
+                        <outlet property="sumLabel" destination="EhX-dB-gXn" id="nyk-cj-gIO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="textEdited:"/>
+                <relationship kind="outlet" name="num1field" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="num2field" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="sumLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

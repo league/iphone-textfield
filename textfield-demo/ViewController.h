@@ -10,4 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property IBOutlet UITextField *num1field;
+@property IBOutlet UITextField *num2field;
+@property IBOutlet UILabel *sumLabel;
+
+-(BOOL)textFieldShouldReturn:(UITextField*)textField;
+-(IBAction)textEdited:(id)sender;
 @end
